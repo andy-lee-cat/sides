@@ -13,6 +13,7 @@ def images_to_pdf(img_dir, output_pdf):
     # 获取图片列表，并按编号排序
     img_files = [f for f in os.listdir(img_dir) if f.endswith(".png")]
     img_files.sort(key=lambda x: int(re.search(r'\d+', x).group()))
+    print(img_files) 
     
     if not img_files:
         raise ValueError("No images found in the specified directory.")
